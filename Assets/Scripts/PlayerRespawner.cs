@@ -15,6 +15,13 @@ public class PlayerRespawner : MonoBehaviour
     public void SetCheckpoint(Vector3 checkpointPosition)
     {
         respawnPosition = checkpointPosition;
+        Debug.Log($"PlayerRespawner checkpoint position updated to: {respawnPosition}");
+    }
+
+    // Ny offentlig metode til at starte respawn udefra (f.eks. fra PauseMenuController)
+    public void StartRespawn()
+    {
+        StartCoroutine(SmoothRespawn());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,8 +35,14 @@ public class PlayerRespawner : MonoBehaviour
 
     private IEnumerator SmoothRespawn()
     {
+        Debug.Log($"SmoothRespawn started. Target position: {respawnPosition}");
+
         CharacterController controller = GetComponent<CharacterController>();
-        controller.enabled = false; // Disable movement control
+        if (controller != null)
+        {
+            controller.enabled = false; // Disable movement control
+            Debug.Log("CharacterController disabled for respawn");
+        }
 
         Vector3 startPos = transform.position;
         float elapsedTime = 0f;
@@ -43,6 +56,12 @@ public class PlayerRespawner : MonoBehaviour
         }
 
         transform.position = respawnPosition; // Ensure exact final position
-        controller.enabled = true; // Re-enable controller
+        Debug.Log($"SmoothRespawn completed. Final position: {transform.position}");
+
+        if (controller != null)
+        {
+            controller.enabled = true; // Re-enable controller
+            Debug.Log("CharacterController re-enabled after respawn");
+        }
     }
 }
