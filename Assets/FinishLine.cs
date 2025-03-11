@@ -2,31 +2,34 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro; // For TextMeshPro UI
+using System.Collections; // Required for coroutines
 
 public class FinishLine : MonoBehaviour
 {
     [SerializeField] private GameObject gameFinishedUI;
-    [SerializeField] private TextMeshProUGUI finalTimeText; // Reference til tekst der viser endelig tid
+    [SerializeField] private TextMeshProUGUI finalTimeText; // Reference to text displaying final time
+    [SerializeField] private TextMeshProUGUI levelCompleteText; // Reference to text displaying "Level Complete"
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+            Debug.Log("Player has entered the finish line");
         {
             int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
             if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
             {
-                SceneManager.LoadScene(nextSceneIndex);
+                StartCoroutine(ShowLevelCompleteAndLoadScene(3f, nextSceneIndex));
             }
             else
             {
-                // Stop timeren og f� den endelige tid
+                // Stop the timer and get the final time
                 if (GameTimer.Instance != null)
                 {
                     GameTimer.Instance.StopTimer();
                     string finalTime = GameTimer.Instance.GetTimeString();
 
-                    // Vis UI med den endelige tid
+                    // Show UI with the final time
                     if (gameFinishedUI != null)
                     {
                         gameFinishedUI.SetActive(true);
@@ -39,7 +42,20 @@ public class FinishLine : MonoBehaviour
                 }
 
                 Debug.Log("Game Finished! Final time: " + GameTimer.Instance.GetTimeString());
+                StartCoroutine(ShowLevelCompleteAndLoadScene(3f, nextSceneIndex));
             }
         }
+    }
+
+    private IEnumerator ShowLevelCompleteAndLoadScene(float delay, int sceneIndex)
+    {
+        if (levelCompleteText != null)
+        {
+            levelCompleteText.text = "Level Complete!";
+            levelCompleteText.gameObject.SetActive(true);
+        }
+        
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneIndex);
     }
 }
