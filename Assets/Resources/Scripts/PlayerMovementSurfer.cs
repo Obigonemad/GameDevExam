@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementSurfer : MonoBehaviour
 {
      private const float gravity = -9.82f;
     [SerializeField] private float WalkSpeed = 1.5f;

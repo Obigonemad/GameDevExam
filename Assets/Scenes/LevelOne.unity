@@ -364,6 +364,7 @@ MonoBehaviour:
   playerTag: Player
   collectionSound: {fileID: 0}
   collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
+  isCollected: 0
 --- !u!4 &7988781 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2838288787159351045, guid: c95646f11c8203b438f9c638247c3121, type: 3}
@@ -6779,6 +6780,7 @@ MonoBehaviour:
   playerTag: Player
   collectionSound: {fileID: 0}
   collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
+  isCollected: 0
 --- !u!1001 &437511153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7945,6 +7947,7 @@ MonoBehaviour:
   playerTag: Player
   collectionSound: {fileID: 0}
   collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
+  isCollected: 0
 --- !u!4 &517931279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6631153731090029428, guid: ce5fc1ae746770c48a546879d9226882, type: 3}
@@ -13008,6 +13011,72 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 14500033}
   m_SourcePrefab: {fileID: 100100000, guid: e08ed716344e5e749b109a7f11f4be4f, type: 3}
+--- !u!1 &918234466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7159818066108266395, guid: 1cac9a8ad5e5c1240b18289df5640023, type: 3}
+  m_PrefabInstance: {fileID: 3839179477224188553}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918234469}
+  - component: {fileID: 918234468}
+  - component: {fileID: 918234467}
+  m_Layer: 0
+  m_Name: CheckPointOne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &918234467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8321723751816135220, guid: 1cac9a8ad5e5c1240b18289df5640023, type: 3}
+  m_PrefabInstance: {fileID: 3839179477224188553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918234466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376f8fa08f8f78e45a966f6b8acfd6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &918234468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 6176508600122755738, guid: 1cac9a8ad5e5c1240b18289df5640023, type: 3}
+  m_PrefabInstance: {fileID: 3839179477224188553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918234466}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &918234469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 5731748099700442973, guid: 1cac9a8ad5e5c1240b18289df5640023, type: 3}
+  m_PrefabInstance: {fileID: 3839179477224188553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918234466}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.473, y: 11.113, z: -32.808}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &923539232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14589,6 +14658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fcdeed4390e6d47b230860d1007233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPosition: {x: 0, y: 0, z: 0}
   respawnSpeed: 2
   duration: 1.5
 --- !u!1 &1014402210
@@ -16680,6 +16750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 0}
+  coins: 0
 --- !u!4 &1174895184
 Transform:
   m_ObjectHideFlags: 0
@@ -17941,6 +18012,7 @@ MonoBehaviour:
   playerTag: Player
   collectionSound: {fileID: 0}
   collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
+  isCollected: 0
 --- !u!4 &1250558680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6721412949723261072, guid: 3d6ee73ce0cc2f34fb0943aee27b056a, type: 3}
@@ -19589,10 +19661,10 @@ MonoBehaviour:
         z: 8.042901
       Rotation:
         value:
-          x: 0.13039711
-          y: -0.3875814
-          z: -0.21764433
-          w: 0.88623255
+          x: 0.13039713
+          y: -0.38758135
+          z: -0.21764435
+          w: 0.8862327
     - Position:
         x: -23.29
         y: 4.23
@@ -21008,6 +21080,7 @@ MonoBehaviour:
   playerTag: Player
   collectionSound: {fileID: 0}
   collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
+  isCollected: 0
 --- !u!4 &1475107270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6268032636890085329, guid: 0ef2e53acc9a8404e916bf423689836b, type: 3}
@@ -21595,6 +21668,7 @@ MonoBehaviour:
   playerTag: Player
   collectionSound: {fileID: 0}
   collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
+  isCollected: 0
 --- !u!1 &1509162077
 GameObject:
   m_ObjectHideFlags: 0
@@ -22896,6 +22970,7 @@ MonoBehaviour:
   playerTag: Player
   collectionSound: {fileID: 0}
   collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
+  isCollected: 0
 --- !u!1001 &1628884181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22988,6 +23063,7 @@ MonoBehaviour:
   playerTag: Player
   collectionSound: {fileID: 0}
   collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
+  isCollected: 0
 --- !u!4 &1631583516 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1860858671600914529, guid: e279d3b56060181478049ff4e3cadcff, type: 3}
