@@ -1620,6 +1620,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 83579880}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 83579882}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &83579878 stripped
 Transform:
@@ -1665,6 +1668,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &83579882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83579879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &85486692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1740,6 +1761,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 85486695}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 85486697}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &85486693 stripped
 Transform:
@@ -1785,6 +1809,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &85486697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85486694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1 &85566482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,6 +3110,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 133368232}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 133368234}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &133368230 stripped
 Transform:
@@ -3113,6 +3158,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &133368234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133368231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &133639736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4807,6 +4870,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 220852378}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 220852380}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &220852376 stripped
 Transform:
@@ -4852,6 +4918,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &220852380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220852377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1 &221023650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6141432035922498149, guid: cbed2abf2706c324fafa549bf41c15cf, type: 3}
@@ -4959,6 +5043,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 229143863}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 229143865}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &229143861 stripped
 Transform:
@@ -5004,6 +5091,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &229143865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229143862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &230676242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5180,6 +5285,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1956348888}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1956348889}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!1001 &240484155
 PrefabInstance:
@@ -6911,6 +7019,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 2fa528ee8e91e55468e2fa9820a7064e, type: 3}
+--- !u!114 &334341157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334341148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &342954987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7938,6 +8064,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 391492276}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 391492278}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &391492274 stripped
 Transform:
@@ -7983,6 +8112,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &391492278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391492275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &392819900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8132,6 +8279,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 393996198}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 393996200}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &393996196 stripped
 Transform:
@@ -8177,6 +8327,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &393996200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393996197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &394529028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8743,6 +8911,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 419872556}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 419872558}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &419872554 stripped
 Transform:
@@ -8788,6 +8959,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &419872558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419872555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &423337668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10242,6 +10431,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 508747953}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 508747955}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &508747951 stripped
 Transform:
@@ -10287,6 +10479,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &508747955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508747952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &515002368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13468,6 +13678,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 728951690}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 728951692}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &728951688 stripped
 Transform:
@@ -13513,6 +13726,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &728951692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728951689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &730766513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15102,6 +15333,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 834313818}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 834313820}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &834313816 stripped
 Transform:
@@ -15147,6 +15381,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &834313820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834313817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1 &839956308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3737997537004723504, guid: fbdb972e1c3d6b3429009336f3e5b237, type: 3}
@@ -15834,6 +16086,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 886268572}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886268574}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &886268570 stripped
 Transform:
@@ -15879,6 +16134,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &886268574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886268571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &888481317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16107,6 +16380,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 902053868}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 902053870}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &902053866 stripped
 Transform:
@@ -16152,6 +16428,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &902053870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902053867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!4 &902783134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4298532661836370853, guid: 0e6b8aa5c53b4c3459eab860762b4aee, type: 3}
@@ -18747,6 +19041,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1024058323}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1024058325}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1024058321 stripped
 Transform:
@@ -18792,6 +19089,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1024058325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024058322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1025712302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18939,6 +19254,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1029655464}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1029655466}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1029655462 stripped
 Transform:
@@ -18984,6 +19302,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1029655466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029655463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1 &1030263306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3320234001883640325, guid: 80cd59c9c9540eb4c8a76eea92700131, type: 3}
@@ -19709,6 +20045,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1064975106}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1064975108}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1064975104 stripped
 Transform:
@@ -19754,6 +20093,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1064975108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064975105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1066035865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21256,6 +21613,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1134655581}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1134655583}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1134655579 stripped
 Transform:
@@ -21301,6 +21661,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1134655583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134655580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1135431049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21888,6 +22266,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 334341156}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 334341157}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1163363679 stripped
 Transform:
@@ -23030,6 +23411,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1244956574}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1244956576}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1244956572 stripped
 Transform:
@@ -23075,6 +23459,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1244956576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244956573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1246029184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25033,6 +25435,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1331219391}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1331219393}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1331219389 stripped
 Transform:
@@ -25078,6 +25483,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1331219393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331219390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1338958325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25479,6 +25902,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1363595879}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1363595881}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1363595877 stripped
 Transform:
@@ -25524,6 +25950,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1363595881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363595878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1367926973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25611,6 +26055,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1367926976}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1367926978}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1367926974 stripped
 Transform:
@@ -25656,6 +26103,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1367926978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367926975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1383965300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27958,6 +28423,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1503103581}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1503103583}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1503103579 stripped
 Transform:
@@ -28003,6 +28471,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1503103583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503103580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1 &1503600944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7886682095825915888, guid: 7eefdee3ac1175442a62e7488ec76979, type: 3}
@@ -29136,6 +29622,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1557889472}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1557889474}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1557889470 stripped
 Transform:
@@ -29181,6 +29670,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1557889474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557889471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1560380558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30581,6 +31088,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1641427377}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1641427379}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1641427375 stripped
 Transform:
@@ -30626,6 +31136,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1641427379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641427376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1 &1645759849 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7015952236351493620, guid: b3499e7c3769cde44bf8ec2f17ac3d92, type: 3}
@@ -32088,7 +32616,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 316efed6596d40d4181e2b8adc441818, type: 3}
   m_Resource: {fileID: 8300000, guid: 316efed6596d40d4181e2b8adc441818, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.056
+  m_Volume: 0.035
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -32275,6 +32803,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699690930}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699690932}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1699690928 stripped
 Transform:
@@ -32320,6 +32851,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1699690932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699690929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1705267519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32894,6 +33443,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1753807748}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1753807750}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1753807746 stripped
 Transform:
@@ -32939,6 +33491,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1753807750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753807747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1754664362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34142,6 +34712,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1803429586}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1803429588}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &1803429584 stripped
 Transform:
@@ -34187,6 +34760,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1803429588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803429585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1806307491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37275,6 +37866,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 2fa528ee8e91e55468e2fa9820a7064e, type: 3}
+--- !u!114 &1956348889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956348880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &1958322298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38347,6 +38956,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2012513359}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2012513361}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &2012513357 stripped
 Transform:
@@ -38392,6 +39004,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2012513361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012513358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &2012649235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40051,6 +40681,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2106970261}
+    - targetCorrespondingSourceObject: {fileID: 1823123640252282, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2106970263}
   m_SourcePrefab: {fileID: 100100000, guid: 30b32b7e817116548af38dbf12fb57ce, type: 3}
 --- !u!4 &2106970259 stripped
 Transform:
@@ -40096,6 +40729,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5b58aa9b844e438ab720d13fae343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2106970263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106970260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b04b5e5533b218439f29a154072bdd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  rotationAxis: {x: 0, y: 0, z: 1}
+  coinValue: 1
+  playerTag: Player
+  collectionSound: {fileID: 8300000, guid: 02f98902d77f7431cb0c64b9fe4744fc, type: 3}
+  collectionEffect: {fileID: 1702657300312902, guid: a45c51da10cf1a84abc6a99c06951e3f, type: 3}
 --- !u!1001 &2107286189
 PrefabInstance:
   m_ObjectHideFlags: 0

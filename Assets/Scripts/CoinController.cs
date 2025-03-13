@@ -49,7 +49,7 @@ public class CoinController : MonoBehaviour
         // Afspil lyd hvis der er en
         if (collectionSound != null)
         {
-            AudioSource.PlayClipAtPoint(collectionSound, transform.position);
+            AudioSource.PlayClipAtPoint(collectionSound, transform.position, 1.0f);
         }
 
         // Vis effekt hvis der er en
