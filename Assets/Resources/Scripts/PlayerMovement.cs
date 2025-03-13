@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     public event Action Jumping;  
     public event Action Landing; 
-    private bool is2DMode = false; // Set to true when in the cave
+
     public bool IsSprinting() => m_sprinting;
     private bool m_sprinting;
 
@@ -91,44 +91,41 @@ public class PlayerMovement : MonoBehaviour
 
     private void AxesMovement()
     {
-        float h = Input.GetAxis("Horizontal"); // A/D for left/right
-        float v = is2DMode ? 0 : Input.GetAxis("Vertical"); // Disable W/S in 2D mode
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
 
-        Vector3 moveDir;
+        Vector3 _forward = new Vector3(transform.forward.x, m_playerCamera.transform.forward.y, transform.forward.z);
+        Vector3 _right = new Vector3(transform.right.x, m_playerCamera.transform.right.y, transform.right.z);
+
+        Vector3 forward;
+        Vector3 right;
+        
         var speed = m_sprinting ? SprintSpeed : WalkSpeed;
 
-        if (is2DMode)
-        {
-            // Move only along the Z-axis (A = -Z, D = +Z)
-            moveDir = new Vector3(0, 0, h);
-        }
-        else
-        {
-            // Normal 3D movement
-            Vector3 _forward = new Vector3(transform.forward.x, 0, transform.forward.z);
-            Vector3 _right = new Vector3(transform.right.x, 0, transform.right.z);
+        forward = _forward * v;
+        right = _right * h;
 
-            Vector3 forward = _forward * v;
-            Vector3 right = _right * h;
-            moveDir = forward + right;
-        }
+        Vector3 moveDir = forward + right;
 
         if (moveDir.sqrMagnitude > 1)
             moveDir.Normalize();
-
+        
         SetModelRotation(moveDir);
         m_characterController.Move(moveDir * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump"))
         {
-            Jumping?.Invoke();
-            Invoke("SetJumpVelocity", 0.3f);
+            if (IsGrounded())
+            {
+                Jumping?.Invoke();
+                Invoke("SetJumpVelocity", 0.3f);
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
+
         m_characterController.Move(velocity * Time.deltaTime);
     }
-
 
     private void SetJumpVelocity()
     {
