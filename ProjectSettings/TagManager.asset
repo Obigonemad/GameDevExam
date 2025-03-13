@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - TimerText
+  - RespawnTrigger
+  - CoinText
   layers:
   - Default
   - TransparentFX

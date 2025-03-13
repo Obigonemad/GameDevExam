@@ -1,13 +1,13 @@
 using UnityEngine;
-using TMPro; // TextMeshPro namespace
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private TextMeshProUGUI coinText; // Ændret fra Text til TextMeshProUGUI
-    [SerializeField] private int totalCoins = 45; // Totalt antal mønter i spillet
+    [SerializeField] private Text coinText;
+    [SerializeField] private int totalCoins = 45; // Totalt antal mÃ¸nter i spillet
     private int collectedCoins = 0;
 
     private void Awake()
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded; // Tilføj event listener for scene loading
+            SceneManager.sceneLoaded += OnSceneLoaded; // TilfÃ¸j event listener for scene loading
         }
         else
         {
@@ -30,14 +30,14 @@ public class GameManager : MonoBehaviour
         UpdateUI(); // Opdater UI ved start
     }
 
-    // Når en ny scene loades, find coin text UI'en
+    // NÃ¥r en ny scene loades, find coin text UI'en
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Find coin text i den nye scene
         GameObject coinTextObject = GameObject.FindGameObjectWithTag("CoinText");
         if (coinTextObject != null)
         {
-            coinText = coinTextObject.GetComponent<TextMeshProUGUI>(); // Ændret til TextMeshProUGUI
+            coinText = coinTextObject.GetComponent<Text>();
             UpdateUI(); // Opdater UI i den nye scene
         }
     }
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Når objektet ødelægges, fjern event listeneren
+    // NÃ¥r objektet Ã¸delÃ¦gges, fjern event listeneren
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
