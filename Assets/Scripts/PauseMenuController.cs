@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -16,36 +15,22 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private AudioSource menuMusic;
     [SerializeField] private AudioSource buttonSound;
 
-    // Checkpoints hÂndtering med scene-specifik lagring
-    [System.Serializable]
-    public class CheckpointData
-    {
-        public string sceneName;
-        public Vector3 position;
-    }
-
-    // Reference til checkpoints
+    // Reference til checkpoints - kan tilpasses dit checkpoint system
     [Header("Checkpoint System")]
     [SerializeField] private Transform lastCheckpoint;
-    [SerializeField] private List<CheckpointData> checkpointsByScene = new List<CheckpointData>();
-    private bool hasCheckpoint = false;
 
     private string currentSceneName;
 
     private void Awake()
     {
-        Debug.Log("PauseMenuController Awake called");
-
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
-            Debug.Log("PauseMenuController instance created and set to DontDestroyOnLoad");
         }
         else
         {
-            Debug.Log("Duplicate PauseMenuController found, destroying this one");
             Destroy(gameObject);
         }
     }
@@ -53,7 +38,6 @@ public class PauseMenuController : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         currentSceneName = scene.name;
-        Debug.Log($"Scene loaded: {currentSceneName}");
 
         // Find pauseMenuUI i den nye scene hvis den ikke allerede er sat
         if (pauseMenuUI == null)
@@ -63,37 +47,16 @@ public class PauseMenuController : MonoBehaviour
             {
                 Transform panel = canvas.Find("PauseMenuPanel");
                 if (panel != null)
-                {
                     pauseMenuUI = panel.gameObject;
-                    Debug.Log($"Found PauseMenuPanel in scene {currentSceneName}");
-                }
-                else
-                {
-                    Debug.LogWarning($"Could not find 'PauseMenuPanel' under Canvas in scene {currentSceneName}");
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"Could not find Canvas in scene {currentSceneName}");
             }
         }
 
-        // S¯rg for at pausemenuen er deaktiveret ved start
+        // S√∏rg for at pausemenuen er deaktiveret ved start
         if (pauseMenuUI != null)
-        {
             pauseMenuUI.SetActive(false);
-            Debug.Log("PauseMenuPanel set to inactive");
-        }
 
         GameIsPaused = false;
         Time.timeScale = 1f;
-
-        // Vis alle gemte checkpoints til debugging
-        Debug.Log($"Checkpoints by scene count: {checkpointsByScene.Count}");
-        foreach (var checkpoint in checkpointsByScene)
-        {
-            Debug.Log($"Stored checkpoint for scene {checkpoint.sceneName} at position {checkpoint.position}");
-        }
     }
 
     void Update()
@@ -104,7 +67,6 @@ public class PauseMenuController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("ESC key pressed");
             if (GameIsPaused)
             {
                 Resume();
@@ -118,14 +80,13 @@ public class PauseMenuController : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("Resume called");
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
 
         Time.timeScale = 1f;
         GameIsPaused = false;
 
-        // LÂs og skjul cursor nÂr spillet genoptages
+        // L√•s og skjul cursor n√•r spillet genoptages
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -136,7 +97,6 @@ public class PauseMenuController : MonoBehaviour
 
     public void Pause()
     {
-        Debug.Log("Pause called");
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(true);
 
@@ -154,7 +114,6 @@ public class PauseMenuController : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        Debug.Log("LoadMainMenu called");
         Time.timeScale = 1f;
         GameIsPaused = false;
 
@@ -167,7 +126,6 @@ public class PauseMenuController : MonoBehaviour
 
     public void RestartLevel()
     {
-        Debug.Log($"RestartLevel called for scene {currentSceneName}");
         Time.timeScale = 1f;
         GameIsPaused = false;
 
@@ -180,46 +138,62 @@ public class PauseMenuController : MonoBehaviour
 
     public void RestartCheckpoint()
     {
-        Debug.Log($"RESTART CHECKPOINT called in scene {currentSceneName}");
-
+        // Implementer logik til at vende tilbage til sidste checkpoint
         Time.timeScale = 1f;
         GameIsPaused = false;
 
+        // Stop menumusik
         if (menuMusic != null && menuMusic.isPlaying)
             menuMusic.Stop();
 
-        // Find spilleren med tag
+        // Find spilleren
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
+        // F√• PlayerRespawner fra spilleren
         if (player != null)
         {
-            Debug.Log($"Found player: {player.name}");
-
-            // FÂ fat i respawner komponenten
+            // Pr√∏v f√∏rst at bruge PlayerRespawner
             PlayerRespawner respawner = player.GetComponent<PlayerRespawner>();
-
-            if (respawner != null)
+            if (respawner != null && lastCheckpoint != null)
             {
-                // Brug den eksisterende respawn funktion
-                respawner.StartRespawn();
-                Debug.Log("Called PlayerRespawner.StartRespawn()");
+                // S√∏rg for at b√•de PlayerRespawner og PauseMenuController har samme checkpoint
+                respawner.SetCheckpoint(lastCheckpoint.position);
+                // Start smooth respawn
+                StartCoroutine(DelayedRespawn(player, respawner));
+                Debug.Log("Player respawning at checkpoint via PlayerRespawner");
+            }
+            // Brug direkte teleport hvis der ikke er en PlayerRespawner
+            else if (lastCheckpoint != null)
+            {
+                player.transform.position = lastCheckpoint.position;
+                Debug.Log("Player teleported to checkpoint");
             }
             else
             {
-                Debug.LogError("Player does not have PlayerRespawner component!");
+                Debug.LogWarning("No checkpoint found. Consider placing checkpoints in your level.");
             }
-        }
-        else
-        {
-            Debug.LogError("Could not find player with tag 'Player'!");
         }
 
         Resume();
     }
 
+    // Hj√¶lpefunktion til at starte respawn efter en frame
+    private IEnumerator DelayedRespawn(GameObject player, PlayerRespawner respawner)
+    {
+        // Deaktiver CharacterController for at undg√• konflikter
+        CharacterController controller = player.GetComponent<CharacterController>();
+        if (controller != null)
+            controller.enabled = false;
+
+        yield return null; // Vent en frame
+
+        // Start smooth respawn via reflection for at undg√• at √¶ndre PlayerRespawner
+        respawner.SendMessage("SmoothRespawn", SendMessageOptions.DontRequireReceiver);
+    }
+
     public void ExitGame()
     {
-        Debug.Log("ExitGame called");
+        Debug.Log("Exiting game...");
 
 #if UNITY_EDITOR
         // Stopper play mode i Unity Editor
@@ -238,66 +212,13 @@ public class PauseMenuController : MonoBehaviour
 
     void OnDestroy()
     {
-        Debug.Log("PauseMenuController OnDestroy called");
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // Dette er en hjÊlpefunktion til at sÊtte det sidste checkpoint
+    // Dette er en hj√¶lpefunktion til at s√¶tte det sidste checkpoint
     public void SetLastCheckpoint(Transform checkpoint)
     {
-        if (checkpoint != null)
-        {
-            // Gem i legacy system
-            lastCheckpoint = checkpoint;
-            hasCheckpoint = true; // Dette bliver sat, men bruges ikke korrekt i RestartCheckpoint
-            Debug.Log($"Legacy checkpoint set at: {checkpoint.position} in scene: {currentSceneName}");
-
-            // Gem ogsÂ i scene-specifik system
-            string sceneName = SceneManager.GetActiveScene().name;
-
-            // Find eksisterende eller tilf¯j ny
-            CheckpointData data = checkpointsByScene.Find(c => c.sceneName == sceneName);
-
-            if (data != null)
-            {
-                data.position = checkpoint.position;
-                Debug.Log($"Updated scene-specific checkpoint in {sceneName} to {checkpoint.position}");
-            }
-            else
-            {
-                checkpointsByScene.Add(new CheckpointData
-                {
-                    sceneName = sceneName,
-                    position = checkpoint.position
-                });
-                Debug.Log($"Added new scene-specific checkpoint in {sceneName} at {checkpoint.position}");
-            }
-        }
-        else
-        {
-            Debug.LogError("Attempted to set null checkpoint!");
-        }
+        lastCheckpoint = checkpoint;
+        Debug.Log("Checkpoint set at: " + checkpoint.position);
     }
-
-    // HjÊlpe metode til at nulstille checkpoint data (brug i editor)
-    public void ResetCheckpointData()
-    {
-        lastCheckpoint = null;
-        hasCheckpoint = false;
-        checkpointsByScene.Clear();
-        Debug.Log("All checkpoint data has been reset");
-    }
-
-    // Editor menu til at nulstille
-#if UNITY_EDITOR
-    [UnityEditor.MenuItem("Game/Reset PauseMenuController")]
-    private static void ResetInstance()
-    {
-        if (Instance != null)
-        {
-            DestroyImmediate(Instance.gameObject);
-            Debug.Log("PauseMenuController instance reset");
-        }
-    }
-#endif
 }

@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class Checkpoint : MonoBehaviour
             {
                 respawner.SetCheckpoint(transform.position);
 
-                // Opdater også PauseMenuController
+                // Opdater ogsï¿½ PauseMenuController
                 if (PauseMenuController.Instance != null)
                 {
                     PauseMenuController.Instance.SetLastCheckpoint(transform);
