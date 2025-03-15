@@ -5,15 +5,15 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private Transform player; // Assign player in Inspector
-    [SerializeField] private GameObject objectToDrop; // Object to drop
-    [SerializeField] private AudioClip dropSound; // Sound effect when object drops
-    [SerializeField] private float dropHeight = 1.5f; // Distance below the enemy to drop the object
-    [SerializeField] private float reachDistance = 1.5f; // Distance to trigger event
-    [SerializeField] private float resumeChaseDelay = 1.5f; // Delay before resuming chase
-    [SerializeField] private float despawnTime = 5f; // Time before the skeleton disappears
+    [SerializeField] private Transform player; // Tildel spilleren i Inspector
+    [SerializeField] private GameObject objectToDrop; // Objekt der skal droppes
+    [SerializeField] private AudioClip dropSound; // Lyd effekt når objektet droppes
+    [SerializeField] private float dropHeight = 1.5f; // Afstand under fjenden til at droppe objektet
+    [SerializeField] private float reachDistance = 1.5f; // Afstand til at udløse hændelse
+    [SerializeField] private float resumeChaseDelay = 1.5f; // Forsinkelse før jagten genoptages
+    [SerializeField] private float despawnTime = 5f; // Tid før skelettet forsvinder
     private NavMeshAgent navMeshAgent;
-    private bool hasReachedTarget = false; // Prevents multiple triggers
+    private bool hasReachedTarget = false; // Forhindrer flere triggere
 
     private void Start()
     {
@@ -21,27 +21,27 @@ public class EnemyAI : MonoBehaviour
 
         if (navMeshAgent == null)
         {
-            Debug.LogError("NavMeshAgent component is missing on " + gameObject.name);
+            Debug.LogError("NavMeshAgent-komponenten mangler på " + gameObject.name);
             enabled = false;
             return;
         }
 
         if (!navMeshAgent.isOnNavMesh)
         {
-            Debug.LogError(gameObject.name + " is not placed on a valid NavMesh!");
+            Debug.LogError(gameObject.name + " er ikke placeret på en gyldig NavMesh!");
             enabled = false;
             return;
         }
 
         if (player == null)
         {
-            Debug.LogError("Player reference is missing! Assign it in the Inspector.");
+            Debug.LogError("Spillerreference mangler! Tildel den i Inspector.");
             enabled = false;
         }
 
         if (objectToDrop == null)
         {
-            Debug.LogError("Object to drop is missing! Assign it in the Inspector.");
+            Debug.LogError("Objekt til at droppe mangler! Tildel det i Inspector.");
             enabled = false;
         }
     }
@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (navMeshAgent == null || !navMeshAgent.isOnNavMesh)
         {
-            Debug.LogWarning("NavMeshAgent is not valid or AI is not on a NavMesh!");
+            Debug.LogWarning("NavMeshAgent er ikke gyldig, eller AI'en er ikke på en NavMesh!");
             return;
         }
 
@@ -72,20 +72,20 @@ public class EnemyAI : MonoBehaviour
         if (!hasReachedTarget && distance <= reachDistance)
         {
             hasReachedTarget = true;
-            Debug.Log($"Target reached! Distance: {distance}. Dropping object...");
+            Debug.Log($"Mål nået! Afstand: {distance}. Dropper objekt...");
             OnTargetReached();
         }
     }
 
     private void OnTargetReached()
     {
-        // Drop the object below the enemy
+        // Drop objektet under fjenden
         DropObject();
 
-        // Stop movement briefly before resuming chase
+        // Stop bevægelsen kortvarigt før jagten genoptages
         navMeshAgent.isStopped = true;
 
-        // Start a coroutine to resume chasing the player after a delay
+        // Start en coroutine for at genoptage jagten på spilleren efter en forsinkelse
         StartCoroutine(ResumeChaseAfterDelay());
     }
 
@@ -93,53 +93,53 @@ public class EnemyAI : MonoBehaviour
     {
         if (objectToDrop != null)
         {
-            // Drop the object slightly below the enemy position
+            // Drop objektet en smule under fjendens position
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y - dropHeight, transform.position.z);
-            Debug.Log($"Dropping object at position: {dropPosition}");
+            Debug.Log($"Dropper objekt på position: {dropPosition}");
 
-            // Instantiate the object at the calculated position
+            // Instantiér objektet på den beregnede position
             GameObject droppedObject = Instantiate(objectToDrop, dropPosition, Quaternion.identity);
 
             if (droppedObject != null)
             {
-                Debug.Log("Object instantiated successfully.");
+                Debug.Log("Objekt instantiéret succesfuldt.");
                 
-                // Play sound effect at drop location
+                // Afspil lydeffekt ved drop-positionen
                 if (dropSound != null)
                 {
                     AudioSource.PlayClipAtPoint(dropSound, dropPosition);
-                    Debug.Log("Drop sound played.");
+                    Debug.Log("Drop-lyd afspillet.");
                 }
                 else
                 {
-                    Debug.LogWarning("No drop sound assigned!");
+                    Debug.LogWarning("Ingen drop-lyd er tildelt!");
                 }
                 
-                // Ensure object has a Rigidbody for physics (gravity)
+                // Sikre at objektet har en Rigidbody til fysik (tyngdekraft)
                 Rigidbody rb = droppedObject.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    Debug.Log("Object has Rigidbody. Enabling gravity.");
-                    rb.isKinematic = false; // Make sure it's not kinematic so gravity can affect it
-                    rb.useGravity = true;   // Ensure that gravity is enabled for the object
+                    Debug.Log("Objektet har en Rigidbody. Aktiverer tyngdekraft.");
+                    rb.isKinematic = false; // Sørg for, at det ikke er kinematisk, så tyngdekraften påvirker det
+                    rb.useGravity = true;   // Sikre at tyngdekraft er aktiveret for objektet
                 }
                 else
                 {
-                    Debug.LogWarning("Object does not have a Rigidbody component! Gravity will not be applied.");
+                    Debug.LogWarning("Objektet har ikke en Rigidbody-komponent! Tyngdekraft vil ikke blive anvendt.");
                 }
 
-                // Destroy the dropped object after `despawnTime` seconds
+                // Ødelæg det droppede objekt efter `despawnTime` sekunder
                 Destroy(droppedObject, despawnTime);
-                Debug.Log($"Object will despawn in {despawnTime} seconds.");
+                Debug.Log($"Objektet vil forsvinde om {despawnTime} sekunder.");
             }
             else
             {
-                Debug.LogWarning("Failed to instantiate the object!");
+                Debug.LogWarning("Kunne ikke instantiere objektet!");
             }
         }
         else
         {
-            Debug.LogWarning("No object assigned to drop!");
+            Debug.LogWarning("Intet objekt tildelt til at droppe!");
         }
     }
 
@@ -147,9 +147,9 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(resumeChaseDelay);
 
-        // Resume chasing the player
-        Debug.Log("Resuming chase...");
+        // Genoptag jagten på spilleren
+        Debug.Log("Genoptager jagten...");
         navMeshAgent.isStopped = false;
-        hasReachedTarget = false; // Reset for next trigger
+        hasReachedTarget = false; // Nulstil til næste trigger
     }
 }
