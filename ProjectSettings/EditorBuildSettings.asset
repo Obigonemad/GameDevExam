@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelTwo.unity
     guid: 80550866a17517840818c6f61c36a448
   - enabled: 1
-    path: Assets/Scenes/LevelThree-Chaser.unity
+    path: Assets/Scenes/LevelThree.unity
     guid: 5179e4abe7c10474ca33935c5baabb0f
   - enabled: 1
     path: Assets/Scenes/LevelFour.unity

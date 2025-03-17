@@ -63,11 +63,16 @@ public class EnemyFollow : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Når fjenden rører spilleren, genstart niveauet
+        // Når fjenden rører spilleren, gå til sidste checkpoint
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Fjenden rørte spilleren! Genstarter niveauet.");
-            RestartLevel();
+            Debug.Log("Fjenden rørte spilleren! Tilbage til checkpoint");
+            PlayerRespawner playerRespawner = player.GetComponent<PlayerRespawner>();
+            playerRespawner.StartRespawn();
+            
+            // hvis vi vil genstarte banen istedet for:
+            // Debug.Log("Fjenden rørte spilleren! Genstarter niveauet.");
+            // RestartLevel();
         }
     }
 
