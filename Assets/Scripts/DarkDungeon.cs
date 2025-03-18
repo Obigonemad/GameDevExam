@@ -5,7 +5,7 @@ public class DarkDungeonEffect : MonoBehaviour
 {
     public Camera playerCamera;  // Referencen til spillerens kamera
     public float normalFOV = 60f;  // Normal synsfelt
-    public float darkDungeonFOV = 40f;  // Begrænset synsfelt i dungeon
+    public float darkDungeonFOV = 20f;  // Begrænset synsfelt i dungeon
     public float smoothSpeed = 5f;  // Hvor hurtigt FOV ændrer sig
 
     private void OnTriggerEnter(Collider other)
