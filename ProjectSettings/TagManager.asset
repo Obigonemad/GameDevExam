@@ -7,6 +7,8 @@ TagManager:
   - TimerText
   - RespawnTrigger
   - CoinText
+  - Dungeon
+  - GameTitle
   layers:
   - Default
   - TransparentFX
