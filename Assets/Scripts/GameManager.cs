@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private TextMeshProUGUI coinText; // Ændret fra Text til TextMeshProUGUI
-    [SerializeField] private int totalCoins = 45; // Totalt antal mønter i spillet
+    [SerializeField] private int totalCoins = 59; // Totalt antal mønter i spillet
     private int collectedCoins = 0;
 
     private void Awake()
