@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: {fileID: 1358353075}
   mainColor: {r: 0.7830189, g: 0.6759078, b: 0.6759078, a: 1}
-  glowColor: {r: 1, g: 1, b: 1, a: 0.5}
+  glowColor: {r: 0, g: 0, b: 0, a: 0.5}
   pulseSpeed: 1
   pulseAmount: 0.2
   hoverSpeed: 0.5
@@ -2518,7 +2518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 389791397}
-  totalCoins: 45
+  totalCoins: 59
 --- !u!4 &1857725112
 Transform:
   m_ObjectHideFlags: 0
