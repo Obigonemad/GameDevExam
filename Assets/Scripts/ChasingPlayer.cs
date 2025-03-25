@@ -1,22 +1,23 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EnemyFollow : MonoBehaviour
 {
     public Transform player;  // Spilleren som fjenden skal følge
     public float moveSpeed = 3f;  // Fjendens bevægelseshastighed
-    public float delayTime = 1f;  // Forsinkelsestid (sekunder) før fjenden følger spilleren
     public float followDistance = 1.5f; // Hvor tæt fjenden skal være på spilleren før scenen genstartes
-    public Vector3 groundNormal = Vector3.up;  // Normalen for fladen/grenen
+    private Vector3 groundNormal = Vector3.up;  // Normalen for fladen/grenen
 
-    private float timeSinceLastUpdate = 0f;
+    // Fjendens ønskede startposition (f.eks. en spec. Vector3)
+    private Vector3 enemySpawnPoint = new Vector3(12.9f, 5.34f, 37.8f); 
+    private Collider playerCollider;
+    private Collider enemyCollider;
+
     private bool isChasing = false;  // Er fjenden begyndt at følge spilleren?
 
     private void Start()
     {
-        // Sørg for, at fjenden har en Collider og at Is Trigger er aktiveret
-        Collider collider = GetComponent<Collider>();
-        collider.isTrigger = true; // Sæt collideren som trigger, så fjenden kan passere igennem objekter
+        playerCollider = player.GetComponent<Collider>();  // Spilleren's Collider
+        enemyCollider = GetComponent<Collider>();  // Fjendens Collider
 
         // Fjenden svæver, så deaktiver gravitation
         Rigidbody rb = GetComponent<Rigidbody>();
@@ -49,7 +50,7 @@ public class EnemyFollow : MonoBehaviour
             // Sørg for at genstarte, når fjenden er tæt på spilleren
             if (Vector3.Distance(transform.position, player.position) < followDistance)
             {
-                RestartLevel();
+                EnemyCheckpointTrigger();
             }
         }
     }
@@ -67,18 +68,76 @@ public class EnemyFollow : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Fjenden rørte spilleren! Tilbage til checkpoint");
-            PlayerRespawner playerRespawner = player.GetComponent<PlayerRespawner>();
-            playerRespawner.StartRespawn();
-            
-            // hvis vi vil genstarte banen istedet for:
-            // Debug.Log("Fjenden rørte spilleren! Genstarter niveauet.");
-            // RestartLevel();
+            EnemyCheckpointTrigger();
+        }
+
+        // Hvis fjenden rører StartPoint (startstub), så genstart fjenden
+        if (other.CompareTag("StartPoint"))
+        {
+            Debug.Log("Fjenden rørte StartPoint! Genstart fjenden.");
+            EnemyReset();
         }
     }
 
-    private void RestartLevel()
+    private void EnemyCheckpointTrigger()
     {
         // Genstart niveauet, når fjenden rører spilleren
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        PlayerRespawner playerRespawner = player.GetComponent<PlayerRespawner>();
+        playerRespawner.StartRespawn();
+        
+        // Hvis fjenden er tæt på startpositionen, reset fjenden
+        if (transform.position == enemySpawnPoint)
+        {
+            Debug.Log("Fjenden rørte startpositionen - fjenden genstartes!");
+            EnemyReset();
+        }
     }
+
+ private void EnemyReset()
+{
+    // Midlertidigt deaktiver Collideren for at undgå kollisioner, når vi flytter fjenden
+    Collider coll = GetComponent<Collider>();
+    coll.enabled = false;  // Deaktiverer collideren midlertidigt for at undgå kollision
+
+    // Log fjendens nuværende position, før vi sætter den til startpositionen
+    Debug.Log("Fjenden position før reset: " + transform.position);
+
+    // Find træstubben og få dens Collider
+    Transform treeStump = GameObject.FindWithTag("StartPoint").transform;
+    Collider treeStumpCollider = treeStump.GetComponent<Collider>(); // Få Collideren
+    float treeStumpHeight = treeStump.position.y + treeStumpCollider.bounds.extents.y; // Juster for colliderens højde
+
+    // Log træstubben's position og dens collider højde
+    Debug.Log("Træstubben position: " + treeStump.position);
+    Debug.Log("Træstubben højder: " + treeStumpCollider.bounds.extents.y);
+
+    // Juster fjendens position lidt over træstubben's højde
+    Vector3 adjustedPosition = new Vector3(treeStump.position.x, treeStumpHeight + 10f, treeStump.position.z);  // Justeret y med +10f for at placere den lidt højere ovenpå
+
+    // Fjenden resettes til den ønskede startposition
+    transform.position = adjustedPosition;  // Brug træstubben's x og z, og den justerede y
+
+    // Log fjendens position, efter den er blevet flyttet
+    Debug.Log("Fjenden er flyttet til: " + transform.position);
+
+    // Genaktiver Collideren, så fjenden kan begynde at kollidere med andre objekter igen
+    coll.enabled = true;  // Genaktiverer collideren
+
+    // Log positionen efter Collideren er genaktiveret
+    Debug.Log("Collider genaktiveret. Fjendens position: " + transform.position);
+
+    // Deaktiver StartChaseTrigger midlertidigt, så jagten ikke starter automatisk
+    StartChaseTrigger startChaseTrigger = FindObjectOfType<StartChaseTrigger>();
+    if (startChaseTrigger != null)
+    {
+        startChaseTrigger.ResetTrigger();  // Nulstil triggeren for at sikre, at jagten ikke starter med det samme
+    }
+
+    // Stop jagten ved at sætte isChasing til false
+    isChasing = false;  // Sørg for at stoppe jagten, når fjenden resettes
+    Debug.Log("Fjenden jagt stoppet.");
+}
+
+
+
 }

@@ -9,6 +9,7 @@ TagManager:
   - CoinText
   - Dungeon
   - GameTitle
+  - StartPoint
   layers:
   - Default
   - TransparentFX

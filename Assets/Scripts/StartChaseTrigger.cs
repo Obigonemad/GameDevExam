@@ -5,7 +5,7 @@ public class StartChaseTrigger : MonoBehaviour
 {
     public EnemyFollow enemyFollowScript;  // Reference til fjendens script
 
-    private bool hasTriggered = false;  // Variabel til at sikre, at triggeren kun aktiveres én gang
+    internal bool hasTriggered = false;  // Variabel til at sikre, at triggeren aktiveres ved kontakt med 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,5 +23,11 @@ public class StartChaseTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);  // Forsinkelse på 1 sekund før jagten starter
         enemyFollowScript.StartChasing();  // Start jagten
+    }
+
+    // Nulstil triggeren
+    public void ResetTrigger()
+    {
+        hasTriggered = false;
     }
 }

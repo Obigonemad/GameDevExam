@@ -10286,9 +10286,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8861666406234849818, guid: bd9e3c85c3ef922499d9ea839f8204a3, type: 3}
       propertyPath: m_Name
-      value: Tree_Stump_1 (2)
+      value: StartStump
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8861666406234849818, guid: bd9e3c85c3ef922499d9ea839f8204a3, type: 3}
+      propertyPath: m_TagString
+      value: StartPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1415532134866631376, guid: bd9e3c85c3ef922499d9ea839f8204a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -28783,7 +28788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3084880623642568835, guid: 13613d48b05008747b336f4a0568a938, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.01
+      value: 5.34
       objectReference: {fileID: 0}
     - target: {fileID: 3084880623642568835, guid: 13613d48b05008747b336f4a0568a938, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28861,9 +28866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1109798117}
   moveSpeed: 0.75
-  delayTime: 2
   followDistance: 0.1
-  groundNormal: {x: 0, y: 1, z: 0}
 --- !u!4 &1473223707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3084880623642568835, guid: 13613d48b05008747b336f4a0568a938, type: 3}
